@@ -253,9 +253,9 @@ int main(void)
 	/* Timing Attacks */
 	if (ENABLE_TIMING_ATTACKS) {
 		print_category(TEXT("Timing-attacks"));
-		UINT delayInSeconds = 600U;
+		UINT delayInSeconds = 10U;
 		UINT delayInMillis = delayInSeconds * 1000U;
-		printf("\n[*] Delay value is set to %u minutes ...\n", delayInSeconds / 60);
+		printf("\n[*] Delay value is set to %u secondes ...\n", delayInSeconds);
 
 		exec_check(timing_NtDelayexecution, delayInMillis, TEXT("Performing a sleep using NtDelayExecution ..."));
 		exec_check(timing_sleep_loop, delayInMillis, TEXT("Performing a sleep() in a loop ..."));
